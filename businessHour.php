@@ -23,5 +23,21 @@
         }
 
         $textoPrompt = 'Estamos fora do horário de atendimento';
+
+        switch($idBH){
+            case '1':
+                // segunda a sexta 08 as 21
+                $prompt = "2146";
+                if(in_array($diaDaSemana, $arraySemana) && $flagFeriado != 1){
+                    if((int)$horario >= 800 && (int)$horario < 2100){
+                        $bh = 1;
+                    }
+                }
+                break;
+
+                // Os cases podem se repetir de acordo com a necessidade.
+        }
+
+
     }
 ?>
